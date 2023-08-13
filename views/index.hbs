@@ -1,2 +1,13 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>Welcome to the chat!</p>
+<ul>
+  {{#each messages}}
+    <li>
+      From
+      {{this.user}}:
+      {{this.added}}
+      {{this.text}}
+    </li>
+  {{/each}}
+</ul>
+<a href="/new">Post a message of your own!</a>
